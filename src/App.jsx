@@ -1,13 +1,17 @@
 import { useState } from "react";
-import { Return } from "./components/data.js";
+import BlogList from "./components/BlogList";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [blogs, Setblogs] = useState([
+    { name: "wayne", age: 20, id: 1 },
+    { name: "louxu", age: 23, id: 2 },
+    { name: "gay", age: 18, id: 3 },
+    { name: "pussy", age: 27, id: 4 },
+  ]);
+
   return (
     <>
-      <button onClick={() => setCount(count + 1)}>+1</button>
-      <span>目前數字：{count}</span>
-      <button onClick={() => setCount(Return(count))}>-1</button>
+      <BlogList blogs={blogs} name="老徐工程師" />
     </>
   );
 }
