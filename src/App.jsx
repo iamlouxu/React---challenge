@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <BlogList blogs={blogs} name="老徐工程師" />
+      <BlogList blogs={blogs} name="我要當軟體工程師" />
     </>
   );
 }
