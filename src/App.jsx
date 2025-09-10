@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BlogList from "./components/BlogList";
 function App() {
   const [blogs, setBlogs] = useState([
@@ -13,6 +13,10 @@ function App() {
     setBlogs(newBlog);
   }
 
+  useEffect(() => {
+    console.log(blogs);
+    console.log("我會當軟體工程師");
+  });
   return (
     <>
       <BlogList blogs={blogs} name="老徐是軟體工程師" handleList={handleList} />
