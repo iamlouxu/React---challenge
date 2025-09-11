@@ -8,18 +8,22 @@ function App() {
     { name: "pussy", age: 27, id: 4 },
   ]);
 
+  const [name, setName] = useState("wayne");
+
   function handleList(id) {
     const newBlog = blogs.filter((blog) => blog.id !== id);
     setBlogs(newBlog);
   }
 
   useEffect(() => {
-    console.log(blogs);
     console.log("我會當軟體工程師");
-  });
+    console.log(name);
+  }, [name]);
   return (
     <>
       <BlogList blogs={blogs} name="老徐是軟體工程師" handleList={handleList} />
+      <button onClick={() => setName("老徐")}>我是一顆按鈕</button>
+      <p>{name}</p>
     </>
   );
 }
