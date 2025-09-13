@@ -1,12 +1,11 @@
-function BlogList({ blogs, name, handleList }) {
+function BlogList({ blogs, title }) {
   return (
     <>
-      <h1>{name}</h1>
+      <h1>{title}</h1>
       {blogs.map((blog) => (
         <div key={blog.id}>
-          <h1>{blog.name}</h1>
-          <p>{blog.age}歲</p>
-          <button onClick={() => handleList(blog.id)}>刪除</button>
+          <h1>{blog.title}</h1>
+          <p>{blog.author}</p>
         </div>
       ))}
     </>
